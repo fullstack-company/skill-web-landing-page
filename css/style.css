@@ -125,28 +125,28 @@ body {
   text-shadow: 0px 3.21429px 5.35714px rgba(0, 0, 0, 0.25);
 }
 .picture {
-  position: relative;
+  display: grid;
+  grid-template-areas: "bg";
 }
-.picture__title {
-  position: absolute;
+.picture picture {
+  grid-area: bg;
+}
+.picture__container {
+  grid-area: bg;
 }
 
 /* Picture sections styles */
 .picture.rock .picture__title {
-  bottom: 73px;
-  left: 25px;
+  margin-top: 98px;
 }
 .picture.peaks .picture__title {
-  top: 42px;
-  left: 25px;
+  margin-top: 42px;
 }
 .picture.resorts .picture__title {
-  bottom: 25px;
-  left: 25px;
+  margin-top: 179px;
 }
 .picture.watch .picture__title {
-  top: 49px;
-  left: 25px;
+  margin-top: 49px;
 }
 
 /* Header styles */
@@ -456,22 +456,6 @@ body {
     line-height: 110px;
     letter-spacing: 0.07em;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-  .picture.rock .picture__title {
-    bottom: 116px;
-    left: 55px;
-  }
-  .picture.peaks .picture__title {
-    top: 212px;
-    left: 53px;
-  }
-  .picture.resorts .picture__title {
-    bottom: 50px;
-    left: 55px;
-  }
-  .picture.watch .picture__title {
-    top: 100px;
-    left: 55px;
   }
   .header {
     padding-top: 29px;
@@ -789,16 +773,16 @@ body {
     padding: 0 55px;
   }
   .picture.rock .picture__title {
-    bottom: 216px;
+    margin-top: 210px;
   }
   .picture.peaks .picture__title {
-    top: 378px;
+    margin-top: 378px;
   }
   .picture.resorts .picture__title {
-    bottom: 88px;
+    margin-top: 448px;
   }
   .picture.watch .picture__title {
-    top: 265px;
+    margin-top: 265px;
   }
   .promo__stores {
     margin-bottom: 0;
