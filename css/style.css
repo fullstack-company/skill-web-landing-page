@@ -154,7 +154,84 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  padding-top: 44px;
   z-index: 10;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo {
+  flex-basis: 99px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.header__menus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity var(--transition), transform var(--transition);
+  z-index: 9;
+}
+.header .menu {
+}
+.header .menu__link {
+}
+.header .menu__link.active {
+}
+.header .season {
+}
+.header .season__label {
+}
+.season__status {
+}
+.header .lang {
+}
+.header .lang__dropdown {
+}
+.header .lang__menu {
+}
+.header .burger {
+  position: relative;
+  flex-basis: 25px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 24px;
+  padding: 6px 3px;
+}
+.header .burger__line {
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  right: 0;
+  background-color: var(--black);
+  transition: all var(--transition);
+}
+.header .burger__line.first {
+  top: 6px;
+}
+.header .burger__line.second {
+  top: calc(50% - 1px);
+}
+.header .burger__line.third {
+  bottom: 6px;
+}
+.header .burger._active .burger__line.first {
+  top: 11px;
+  transform: rotate(45deg);
+}
+.header .burger._active .burger__line.second {
+  transform: scale(0);
+}
+.header .burger._active .burger__line.third {
+  bottom: 11px;
+  transform: rotate(-45deg);
 }
 
 /* Promo styles */
