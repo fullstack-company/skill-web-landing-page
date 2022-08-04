@@ -114,6 +114,40 @@ body {
   color: var(--black);
   margin-bottom: 44px;
 }
+.image-title {
+  font-family: var(--fontFamilySecondary);
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 33px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--white);
+  text-shadow: 0px 3.21429px 5.35714px rgba(0, 0, 0, 0.25);
+}
+.picture {
+  position: relative;
+}
+.picture__title {
+  position: absolute;
+}
+
+/* Picture sections styles */
+.picture.rock .picture__title {
+  bottom: 73px;
+  left: 25px;
+}
+.picture.peaks .picture__title {
+  top: 42px;
+  left: 25px;
+}
+.picture.resorts .picture__title {
+  bottom: 25px;
+  left: 25px;
+}
+.picture.watch .picture__title {
+  top: 49px;
+  left: 25px;
+}
 
 /* Header styles */
 .header {
@@ -332,8 +366,30 @@ body {
     letter-spacing: 0.07em;
     margin-bottom: 26px;
   }
+  .image-title {
+    font-size: 90px;
+    line-height: 110px;
+    letter-spacing: 0.07em;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .picture.rock .picture__title {
+    bottom: 116px;
+    left: 55px;
+  }
+  .picture.peaks .picture__title {
+    top: 212px;
+    left: 53px;
+  }
+  .picture.resorts .picture__title {
+    bottom: 50px;
+    left: 55px;
+  }
+  .picture.watch .picture__title {
+    top: 100px;
+    left: 55px;
+  }
   .promo__container {
-    bottom: 117px;
+    bottom: 120px;
     left: 55px;
     max-width: 570px;
   }
@@ -503,8 +559,20 @@ body {
     max-width: 1440px;
     padding: 0 55px;
   }
+  .picture.rock .picture__title {
+    bottom: 216px;
+  }
+  .picture.peaks .picture__title {
+    top: 378px;
+  }
+  .picture.resorts .picture__title {
+    bottom: 88px;
+  }
+  .picture.watch .picture__title {
+    top: 265px;
+  }
   .promo__stores {
-    margin-bottom: 136px;
+    margin-bottom: 0;
   }
   .footer .menu-wrapper {
     grid-template-columns: 266px 145px 210px 359px;
