@@ -257,8 +257,11 @@ body {
 }
 .promo__container {
   position: relative;
-  max-width: 158px;
   z-index: 2;
+}
+.promo__wrapper {
+  max-width: 158px;
+  margin: 0 auto;
 }
 .promo__title {
   display: none;
@@ -611,7 +614,7 @@ body {
     align-items: flex-start;
     padding-bottom: 117px;
   }
-  .promo__container {
+  .promo__wrapper {
     max-width: 570px;
     margin-right: auto;
     margin-left: 0;
@@ -796,9 +799,6 @@ body {
   }
   .picture.watch .picture__title {
     top: 265px;
-  }
-  .promo__container {
-    max-width: 570px;
   }
   .promo__stores {
     margin-bottom: 0;
