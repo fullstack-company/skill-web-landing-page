@@ -698,6 +698,9 @@ body {
   .picture.watch .picture__title {
     top: 265px;
   }
+  .promo__container {
+    max-width: 570px;
+  }
   .promo__stores {
     margin-bottom: 0;
   }
