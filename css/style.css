@@ -203,6 +203,7 @@ body {
   flex-grow: 0;
   flex-shrink: 0;
   height: 24px;
+  background-color: transparent;
   padding: 6px 3px;
 }
 .header .burger__line {
@@ -238,6 +239,11 @@ body {
 .promo {
   position: relative;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 32px;
 }
 .promo__img img {
   position: absolute;
@@ -247,12 +253,12 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: right;
+  z-index: 1;
 }
 .promo__container {
-  position: absolute;
-  bottom: 122px;
-  left: calc(50% - 79px);
+  position: relative;
   max-width: 158px;
+  z-index: 2;
 }
 .promo__title {
   display: none;
@@ -269,9 +275,8 @@ body {
 .promo__more {
   display: block;
   max-width: 113px;
-  position: absolute;
-  bottom: 32px;
-  left: calc(50% - 56px);
+  margin-top: 49px;
+  z-index: 2;
 }
 
 /* Mockup sections styles */
@@ -465,10 +470,52 @@ body {
     top: 100px;
     left: 55px;
   }
+  .header {
+    padding-top: 29px;
+  }
+  .header .logo {
+    flex-basis: 160px;
+  }
+  .header__menus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity var(--transition), transform var(--transition);
+    z-index: 9;
+  }
+  .header .menu {
+  }
+  .header .menu__link {
+  }
+  .header .menu__link.active {
+  }
+  .header .season {
+  }
+  .header .season__label {
+  }
+  .season__status {
+  }
+  .header .lang {
+  }
+  .header .lang__dropdown {
+  }
+  .header .lang__menu {
+  }
+  .header .burger {
+    display: none;
+  }
+  .promo {
+    align-items: flex-start;
+    padding-bottom: 117px;
+  }
   .promo__container {
-    bottom: 120px;
-    left: 55px;
     max-width: 570px;
+    margin-right: auto;
+    margin-left: 0;
   }
   .promo__title {
     display: block;
@@ -500,7 +547,10 @@ body {
   }
   .promo__more {
     max-width: 155px;
+    position: absolute;
+    bottom: 32px;
     left: calc(50% - 77px);
+    margin-top: 0;
   }
   .mockup {
     padding: 75px 0 84px;
