@@ -252,7 +252,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: right;
+  object-position: right top;
   z-index: 1;
 }
 .promo__container {
@@ -473,37 +473,136 @@ body {
   .header {
     padding-top: 29px;
   }
+  .header__container {
+    overflow: visible;
+  }
   .header .logo {
     flex-basis: 160px;
   }
   .header__menus {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transform: translateY(-100%);
-    transition: opacity var(--transition), transform var(--transition);
-    z-index: 9;
+    position: static;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    padding-right: 90px;
+    transform: translateY(0);
   }
   .header .menu {
+    display: flex;
+    align-items: center;
+    padding-right: 42px;
+    border-right: 1px solid #dadada;
+    margin-right: 42px;
   }
   .header .menu__link {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--black);
   }
   .header .menu__link.active {
+    position: relative;
+    color: var(--cadetBlue);
+    padding: 0 12px;
+  }
+  .header .menu__link.active::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    background-color: var(--cadetBlue);
+    border-radius: 20px;
+  }
+  .header .menu__link + .menu__link {
+    margin-left: 33px;
   }
   .header .season {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(149, 162, 190, 0.08);
+    padding: 8px 12px 12px 10px;
+    border: 1px solid rgba(149, 162, 190, 0.43);
+    border-radius: 17px;
   }
   .header .season__label {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-top: 3px;
   }
   .season__status {
+    width: 17px;
+    height: 28px;
+    background: #95a2be;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+    margin-left: 9px;
   }
   .header .lang {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(149, 162, 190, 0.08);
+    padding: 12px 34px 11px 12px;
+    border: 1px solid rgba(149, 162, 190, 0.43);
+    border-radius: 17px;
+    margin-left: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 10;
   }
   .header .lang__dropdown {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+  .header .lang__dropdown::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    right: 12px;
+    width: 15px;
+    height: 8px;
+    background-image: url(../images/icons/shevron.svg);
+    transition: transform var(--transition);
+  }
+  .header .lang._active .lang__dropdown::after {
+    transform: rotate(180deg);
   }
   .header .lang__menu {
+    max-height: 0;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity var(--transition), max-height var(--transition);
+  }
+  .header .lang._active .lang__menu {
+    max-height: 500px;
+    opacity: 1;
+  }
+  .header .lang__menu .link {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-top: 11px;
   }
   .header .burger {
     display: none;

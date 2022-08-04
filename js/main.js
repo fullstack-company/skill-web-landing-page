@@ -1,4 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
+  // Burger menu handle
   const burger = document.getElementById("burger");
   const menu = document.getElementById("menu");
 
@@ -14,6 +15,15 @@ window.addEventListener("DOMContentLoaded", () => {
         document.body.style.overflow = null;
         document.body.style.height = null;
       }
-    })
+    });
+  }
+
+  // Lang panel handle
+  const lang = document.getElementById("lang");
+
+  if (lang) {
+    lang.addEventListener("click", () => {
+      lang.classList.toggle("_active");
+    });
   }
 });
