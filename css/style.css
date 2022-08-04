@@ -164,38 +164,129 @@ body {
   justify-content: space-between;
 }
 .header .logo {
+  position: relative;
   flex-basis: 99px;
   flex-grow: 0;
   flex-shrink: 0;
+  z-index: 10;
 }
 .header__menus {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   opacity: 0;
-  transform: translateY(-100%);
+  background-color: var(--white);
+  padding: 100px 0 15px;
+  transform: translateY(-200%);
   transition: opacity var(--transition), transform var(--transition);
   z-index: 9;
 }
+.header__menus._active {
+  opacity: 1;
+  transform: translateY(0);
+}
 .header .menu {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.09);
+  margin-bottom: 20px;
 }
 .header .menu__link {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 12px 20px;
 }
 .header .menu__link.active {
+  color: #95a2be;
+  background: linear-gradient(
+      0deg,
+      rgba(149, 162, 190, 0.13),
+      rgba(149, 162, 190, 0.13)
+    ),
+    #ffffff;
 }
 .header .season {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(149, 162, 190, 0.08);
+  padding: 5px 9px 6px 6px;
+  border: 1px solid rgba(149, 162, 190, 0.43);
+  border-radius: 11px;
+  margin-right: 27px;
+  margin-left: auto;
+  z-index: 10;
 }
 .header .season__label {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-top: 3px;
 }
 .season__status {
+  width: 12px;
+  height: 20px;
+  background: #95a2be;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  margin-left: 7px;
 }
 .header .lang {
+  display: inline-flex;
+  flex-direction: column;
+  background-color: rgba(149, 162, 190, 0.08);
+  padding: 14px 36px 12px 12px;
+  border: 1px solid rgba(149, 162, 190, 0.43);
+  border-radius: 16px;
+  margin: 0 20px;
+  overflow: hidden;
 }
 .header .lang__dropdown {
+  position: relative;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: var(--black);
+}
+.header .lang__dropdown::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: -25px;
+  width: 15px;
+  height: 8px;
+  background-image: url(../images/icons/shevron.svg);
+  transition: transform var(--transition);
+}
+.header .lang._active .lang__dropdown::after {
+  transform: rotate(180deg);
 }
 .header .lang__menu {
+  max-height: 0;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity var(--transition), max-height var(--transition);
+}
+.header .lang._active .lang__menu {
+  max-height: 500px;
+  opacity: 1;
+}
+.header .lang__menu .link {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-top: 11px;
 }
 .header .burger {
   position: relative;
@@ -205,6 +296,7 @@ body {
   height: 24px;
   background-color: transparent;
   padding: 6px 3px;
+  z-index: 10;
 }
 .header .burger__line {
   width: 100%;
@@ -470,29 +562,31 @@ body {
     position: static;
     width: auto;
     height: auto;
-    display: flex;
-    align-items: center;
     opacity: 1;
-    padding-right: 90px;
+    background-color: transparent;
+    padding: 0;
+    margin-left: auto;
     transform: translateY(0);
   }
   .header .menu {
-    display: flex;
+    flex-direction: row;
     align-items: center;
     padding-right: 42px;
     border-right: 1px solid #dadada;
+    border-bottom: none;
     margin-right: 42px;
+    margin-bottom: 0;
   }
   .header .menu__link {
     font-size: 17px;
-    font-weight: 600;
     line-height: 26px;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
     color: var(--black);
+    padding: 0;
   }
   .header .menu__link.active {
     position: relative;
+    background: none;
     color: var(--cadetBlue);
     padding: 0 12px;
   }
@@ -510,86 +604,45 @@ body {
     margin-left: 33px;
   }
   .header .season {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(149, 162, 190, 0.08);
     padding: 8px 12px 12px 10px;
-    border: 1px solid rgba(149, 162, 190, 0.43);
     border-radius: 17px;
+    margin-right: 90px;
+    margin-left: 0;
   }
   .header .season__label {
     font-size: 17px;
-    font-weight: 600;
-    line-height: 1;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--black);
-    margin-top: 3px;
   }
   .season__status {
     width: 17px;
     height: 28px;
-    background: #95a2be;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     border-radius: 14px;
     margin-left: 9px;
   }
   .header .lang {
     position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(149, 162, 190, 0.08);
+    top: -12px;
+    right: -193px;
     padding: 12px 34px 11px 12px;
-    border: 1px solid rgba(149, 162, 190, 0.43);
     border-radius: 17px;
+    margin-right: 0;
     margin-left: 20px;
     cursor: pointer;
-    overflow: hidden;
     z-index: 10;
   }
   .header .lang__dropdown {
     font-size: 17px;
-    font-weight: 600;
     line-height: 26px;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--black);
   }
   .header .lang__dropdown::after {
-    content: "";
-    position: absolute;
-    top: 21px;
-    right: 12px;
-    width: 15px;
-    height: 8px;
-    background-image: url(../images/icons/shevron.svg);
-    transition: transform var(--transition);
-  }
-  .header .lang._active .lang__dropdown::after {
-    transform: rotate(180deg);
-  }
-  .header .lang__menu {
-    max-height: 0;
-    display: flex;
-    flex-direction: column;
-    opacity: 0;
-    transition: opacity var(--transition), max-height var(--transition);
-  }
-  .header .lang._active .lang__menu {
-    max-height: 500px;
-    opacity: 1;
+    top: 9px;
+    right: -21px;
   }
   .header .lang__menu .link {
     font-size: 17px;
-    font-weight: 600;
     line-height: 26px;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--black);
-    margin-top: 11px;
   }
   .header .burger {
     display: none;
