@@ -276,7 +276,7 @@
     </defs>
   </symbol>
   <symbol fill="none" viewBox="0 0 15 8" id="shevron" xmlns="http://www.w3.org/2000/svg">
-    <path d="M1 1L7.47743 7L13.7556 1" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1 1L7.47743 7L13.7556 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   </symbol>
   <symbol fill="none" viewBox="0 0 20 20" id="snowflake" xmlns="http://www.w3.org/2000/svg">
     <path
