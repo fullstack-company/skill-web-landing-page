@@ -73,17 +73,18 @@ ul li {
   --fontFamily: "Poppins", Helvetica, "Trebuchet MS", Tahoma, sans-serif;
   --fontFamilySecondary: "Montserrat", Helvetica, "Trebuchet MS", Tahoma,
     sans-serif;
-  --white: #fff;
   --black: #202020;
-  --mineShaft: #343434;
+  --cadetBlue: #afb8c2;
   --emperor: #545454;
   --gullGray: #97a2af;
-  --cadetBlue: #afb8c2;
-  --emperor: #504f4f;
+  --mineShaft: #343434;
+  --nepal: #95a2be;
   --viridianGreen: #5b8876;
+  --white: #fff;
   --transition: 0.3s ease-in-out;
 }
 body {
+  position: relative;
   width: 100%;
   min-width: 320px;
   min-height: 100vh;
@@ -161,7 +162,6 @@ body {
 .header__container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 .header .logo {
   position: relative;
@@ -214,59 +214,41 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(149, 162, 190, 0.08);
-  padding: 5px 9px 6px 6px;
-  border: 1px solid rgba(149, 162, 190, 0.43);
-  border-radius: 11px;
+  padding: 7px 7px 7px 10px;
+  border: 2px solid var(--nepal);
+  border-radius: 34px;
   margin-right: 27px;
   margin-left: auto;
   z-index: 10;
 }
-.header .season__label {
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1;
-  text-transform: uppercase;
-  color: var(--black);
-  margin-top: 3px;
-}
 .season__status {
-  width: 12px;
-  height: 20px;
-  background: #95a2be;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 9px;
-  margin-left: 7px;
+  width: 27px;
+  height: 27px;
+  background: var(--nepal);
+  border-radius: 50%;
+  margin-left: 12px;
 }
 .header .lang {
   display: inline-flex;
   flex-direction: column;
-  background-color: rgba(149, 162, 190, 0.08);
-  padding: 14px 36px 12px 12px;
-  border: 1px solid rgba(149, 162, 190, 0.43);
-  border-radius: 16px;
   margin: 0 20px;
   overflow: hidden;
 }
 .header .lang__dropdown {
-  position: relative;
+  display: flex;
+  align-items: center;
   font-size: 15px;
   font-weight: 600;
   line-height: 22px;
   text-transform: uppercase;
   color: var(--black);
 }
-.header .lang__dropdown::after {
-  content: "";
-  position: absolute;
-  top: 7px;
-  right: -25px;
-  width: 15px;
-  height: 8px;
-  background-image: url(../images/icons/shevron.svg);
+.header .lang__dropdown svg {
+  stroke: var(--black);
+  margin-left: 9px;
   transition: transform var(--transition);
 }
-.header .lang._active .lang__dropdown::after {
+.header .lang._active .lang__dropdown svg {
   transform: rotate(180deg);
 }
 .header .lang__menu {
@@ -434,7 +416,7 @@ body {
 .footer .logo.mobile {
   text-align: center;
 }
-.footer .logo.mobile img {
+.footer .logo.mobile svg {
   max-width: 149px;
 }
 .footer .copyright.mobile {
@@ -521,6 +503,25 @@ body {
   margin: 50px auto 0;
 }
 
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--nepal);
+  border-radius: 50%;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12),
+    0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.back-to-top svg {
+  stroke: var(--white);
+  transform: rotate(180deg);
+}
+
 /* Media querries */
 @media screen and (min-width: 1024px) {
   body {
@@ -552,7 +553,11 @@ body {
   .header {
     padding-top: 29px;
   }
+  .header .container {
+    overflow: visible;
+  }
   .header__container {
+    position: relative;
     overflow: visible;
   }
   .header .logo {
@@ -565,8 +570,8 @@ body {
     opacity: 1;
     background-color: transparent;
     padding: 0;
-    margin-left: auto;
-    transform: translateY(0);
+    margin-left: 41px;
+    transform: unset;
   }
   .header .menu {
     flex-direction: row;
@@ -604,36 +609,21 @@ body {
     margin-left: 33px;
   }
   .header .season {
-    padding: 8px 12px 12px 10px;
-    border-radius: 17px;
     margin-right: 90px;
-    margin-left: 0;
-  }
-  .header .season__label {
-    font-size: 17px;
-    letter-spacing: 0.05em;
-  }
-  .season__status {
-    width: 17px;
-    height: 28px;
-    border-radius: 14px;
-    margin-left: 9px;
+    margin-left: auto;
   }
   .header .lang {
     position: absolute;
-    top: -12px;
-    right: -193px;
-    padding: 12px 34px 11px 12px;
-    border-radius: 17px;
-    margin-right: 0;
-    margin-left: 20px;
-    cursor: pointer;
+    top: 19px;
+    right: 0;
+    margin: 0;
     z-index: 10;
   }
   .header .lang__dropdown {
     font-size: 17px;
     line-height: 26px;
     letter-spacing: 0.05em;
+    cursor: pointer;
   }
   .header .lang__dropdown::after {
     top: 9px;
@@ -688,7 +678,7 @@ body {
     max-width: 155px;
     position: absolute;
     bottom: 32px;
-    left: calc(50% - 77px);
+    left: calc(50% - 28px);
     margin-top: 0;
   }
   .mockup {
@@ -818,6 +808,10 @@ body {
     text-transform: uppercase;
     color: var(--gullGray);
     justify-self: flex-end;
+  }
+  .back-to-top {
+    right: 13px;
+    bottom: 13px;
   }
 }
 @media screen and (min-width: 1440px) {

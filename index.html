@@ -19,33 +19,44 @@
 <body tabIndex="0">
 
   <!-- Header -->
-  <header class="header">
-    <div class="container header__container">
-      <a href="#home" class="logo">
-        <img src="images/icons/logo-header.svg" alt="">
-      </a>
-      <div class="header__menus" id="menu">
-        <nav class="menu">
-          <a href="#application" class="menu__link active">приложение</a>
-          <a href="#faq" class="menu__link">FAQ</a>
-          <a href="#subscription" class="menu__link">подписка</a>
-        </nav>
-        <div class="lang" id="lang">
-          <div class="lang__dropdown">ru</div>
-          <div class="lang__menu">
-            <a href="#en" class="link">en</a>
+  <header class="header" id="back_to_top">
+    <div class="container">
+      <div class="header__container">
+        <a href="#home" class="logo">
+          <svg width="160" height="64">
+            <use xlink:href="images/sprite.svg#logo_header"></use>
+          </svg>
+        </a>
+        <div class="header__menus" id="menu">
+          <nav class="menu">
+            <a href="#application" class="menu__link active">приложение</a>
+            <a href="#faq" class="menu__link">FAQ</a>
+            <a href="#subscription" class="menu__link">подписка</a>
+          </nav>
+          <div class="lang" id="lang">
+            <div class="lang__dropdown">
+              ru
+              <svg width="15" height="8">
+                <use xlink:href="images/sprite.svg#shevron"></use>
+              </svg>
+            </div>
+            <div class="lang__menu">
+              <a href="#en" class="link">en</a>
+            </div>
           </div>
         </div>
+        <a href="#summer" class="season">
+          <svg width="20" height="20" class="season__icon">
+            <use xlink:href="images/sprite.svg#snowflake"></use>
+          </svg>
+          <div class="season__status"></div>
+        </a>
+        <button id="burger" class="burger">
+          <span class="burger__line first"></span>
+          <span class="burger__line second"></span>
+          <span class="burger__line third"></span>
+        </button>
       </div>
-      <a href="#summer" class="season">
-        <span class="season__label">Зима</span>
-        <div class="season__status"></div>
-      </a>
-      <button id="burger" class="burger">
-        <span class="burger__line first"></span>
-        <span class="burger__line second"></span>
-        <span class="burger__line third"></span>
-      </button>
     </div>
   </header>
 
@@ -70,15 +81,21 @@
           </p>
           <div class="stores promo__stores">
             <a href="#google" class="stores__link">
-              <img src="images/icons/google-icon.svg" alt="google play icon">
+              <svg width="199" height="59">
+                <use xlink:href="images/sprite.svg#google"></use>
+              </svg>
             </a>
             <a href="#apple" class="stores__link">
-              <img src="images/icons/apple-icon.svg" alt="app store icon">
+              <svg width="199" height="59">
+                <use xlink:href="images/sprite.svg#apple"></use>
+              </svg>
             </a>
           </div>
         </div>
       </div>
-      <img src="images/icons/more.svg" class="promo__more" alt="проскрольте вниз">
+      <svg width="57" height="19" class="promo__more">
+        <use xlink:href="images/sprite.svg#more"></use>
+      </svg>
     </section>
 
     <!-- Recording section -->
@@ -365,7 +382,9 @@
   <footer class="footer">
     <div class="container">
       <div class="logo mobile">
-        <img src="images/icons/logo-footer.svg" alt="Skill logo">
+        <svg width="181" height="67">
+          <use xlink:href="images/sprite.svg#logo_footer"></use>
+        </svg>
       </div>
       <small class="copyright mobile">
         &copy; 2022 Skill
@@ -373,10 +392,14 @@
       <div class="menu-wrapper">
         <div class="stores desktop">
           <a href="#google" class="stores__link">
-            <img src="images/icons/google-icon.svg" alt="google play icon">
+            <svg width="199" height="59">
+              <use xlink:href="images/sprite.svg#google"></use>
+            </svg>
           </a>
           <a href="#apple" class="stores__link">
-            <img src="images/icons/apple-icon.svg" alt="app store icon">
+            <svg width="199" height="59">
+              <use xlink:href="images/sprite.svg#apple"></use>
+            </svg>
           </a>
         </div>
         <div class="menu-item">
@@ -398,22 +421,32 @@
       </div>
       <div class="footer__social">
         <div class="logo desktop">
-          <img src="images/icons/logo-footer.svg" alt="Skill logo">
+          <svg width="181" height="67">
+            <use xlink:href="images/sprite.svg#logo_footer"></use>
+          </svg>
         </div>
         <div class="stores mobile">
           <a href="#google" class="stores__link">
-            <img src="images/icons/google-icon.svg" alt="google play icon">
+            <svg width="199" height="59">
+              <use xlink:href="images/sprite.svg#google"></use>
+            </svg>
           </a>
           <a href="#apple" class="stores__link">
-            <img src="images/icons/apple-icon.svg" alt="app store icon">
+            <svg width="199" height="59">
+              <use xlink:href="images/sprite.svg#apple"></use>
+            </svg>
           </a>
         </div>
         <div class="links">
           <a href="#vk" class="link">
-            <img src="images/icons/vk-icon.svg" alt="vkontakte icon">
+            <svg width="45" height="45">
+              <use xlink:href="images/sprite.svg#vk"></use>
+            </svg>
           </a>
           <a href="#instagram" class="link">
-            <img src="images/icons/instagram-icon.svg" alt="instagram icon">
+            <svg width="45" height="45">
+              <use xlink:href="images/sprite.svg#instagram"></use>
+            </svg>
           </a>
         </div>
         <small class="copyright desktop">
@@ -422,6 +455,12 @@
       </div>
     </div>
   </footer>
+
+  <a href="#back_to_top" class="back-to-top">
+    <svg width="15" height="8">
+      <use xlink:href="images/sprite.svg#shevron"></use>
+    </svg>
+  </a>
 
   <script src="js/main.js"></script>
 </body>
