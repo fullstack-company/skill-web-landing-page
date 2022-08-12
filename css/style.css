@@ -349,7 +349,7 @@ body {
   margin-top: 122px;
 }
 .mockup.last {
-  margin-bottom: 122px;
+  margin-bottom: 150px;
 }
 .mockup__info {
   text-align: center;
@@ -357,7 +357,8 @@ body {
 .mockup__img {
   max-width: 220px;
   margin: auto;
-
+}
+.mockup__img .image {
   filter: drop-shadow(0px 0px 15px rgba(36, 47, 94, 0.15));
 }
 .mockup.last .mockup__img {
@@ -517,13 +518,13 @@ body {
   }
   .section-title {
     display: block;
-    font-size: 25px;
+    font-size: 16px;
     font-weight: 900;
-    line-height: 38px;
+    line-height: 24px;
     letter-spacing: 0.07em;
     text-transform: uppercase;
     color: var(--gullGray);
-    margin-bottom: 3px;
+    margin-bottom: 2px;
   }
   .section-subtitle {
     font-size: 34px;
@@ -689,10 +690,6 @@ body {
     max-width: 427px;
     margin: 0;
   }
-  .mockup--bordered .mockup__img {
-    position: relative;
-    right: -25px;
-  }
   .mockup__img.desktop {
     display: block;
   }
@@ -825,14 +822,59 @@ body {
     padding-bottom: 42.2%;
     margin: 0 auto;
   }
+  .mockup.first {
+    margin-top: 205px;
+  }
+  .mockup.recording {
+    margin-top: 233px;
+  }
+  .mockup.routes {
+    margin-top: 284px;
+  }
+  .mockup.resorts {
+    margin-top: 288px;
+  }
   .mockup__container {
     max-width: 1220px;
   }
   .mockup__info {
     flex-basis: 600px;
   }
-  .mockup--bordered .mockup__img {
+  .mockup__img {
+    max-width: unset;
+  }
+  .mockup__img.bordered {
+    position: relative;
+  }
+  .mockup__img.bordered .image {
+    margin-right: 50px;
+  }
+  .mockup__img .image {
+    position: relative;
+    max-width: 375px;
+    z-index: 2;
+  }
+  .mockup__img .map {
+    max-width: 344px;
+    position: absolute;
+    top: -83px;
     right: -164px;
+    z-index: 1;
+  }
+  .mockup__img .map--rating {
+    top: -128px;
+  }
+  .mockup__img .trail {
+    position: absolute;
+    top: -134px;
+    left: -164px;
+    z-index: 1;
+  }
+  .mockup__img .resort {
+    position: absolute;
+    top: -138px;
+    right: -164px;
+    z-index: 1;
   }
   .footer .menu-wrapper {
     grid-template-columns: 266px 145px 210px 359px;
