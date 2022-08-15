@@ -26,4 +26,14 @@ window.addEventListener("DOMContentLoaded", () => {
       lang.classList.toggle("_active");
     });
   }
+
+  // Season click heading handle
+  const seasonBtn = document.getElementById("season");
+
+  if (season) {
+    season.addEventListener("click", (e) => {
+      e.preventDefault;
+      document.querySelector(".video__title").style.display = "block";
+    });
+  }
 });
