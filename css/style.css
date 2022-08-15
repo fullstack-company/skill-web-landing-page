@@ -672,8 +672,7 @@ body {
   }
   .mockup__container {
     display: flex;
-    /* align-items: flex-start; */
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     overflow: visible;
   }
