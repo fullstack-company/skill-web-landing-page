@@ -504,7 +504,7 @@ body {
   border-radius: 50%;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12),
     0px 2px 4px rgba(0, 0, 0, 0.2);
-    z-index: 3;
+  z-index: 3;
 }
 .back-to-top svg {
   stroke: var(--white);
@@ -672,6 +672,7 @@ body {
   }
   .mockup__container {
     display: flex;
+    /* align-items: flex-start; */
     align-items: center;
     justify-content: space-between;
     overflow: visible;
@@ -688,7 +689,7 @@ body {
     margin-left: 30px;
   }
   .mockup__img {
-    max-width: 427px;
+    max-width: unset;
     margin: 0;
   }
   .mockup__img.desktop {
@@ -696,6 +697,39 @@ body {
   }
   .mockup__img.mobile {
     display: none;
+  }
+  .mockup__info {
+    flex-basis: 570px;
+  }
+  .mockup__img.bordered {
+    position: relative;
+  }
+  .mockup__img .image {
+    position: relative;
+    max-width: 275px;
+    z-index: 2;
+  }
+  .mockup__img .map {
+    max-width: 244px;
+    position: absolute;
+    top: -53px;
+    right: -25px;
+    z-index: 1;
+  }
+  .mockup__img .map--rating {
+    top: -78px;
+  }
+  .mockup__img .trail {
+    position: absolute;
+    top: -74px;
+    left: -74px;
+    z-index: 1;
+  }
+  .mockup__img .resort {
+    position: absolute;
+    top: -78px;
+    right: -25px;
+    z-index: 1;
   }
   .mtb {
     display: grid;
@@ -802,7 +836,7 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .container {
-    max-width: 1440px;
+    max-width: 100%;
     padding: 0 55px;
   }
   .promo__wrapper {
@@ -836,46 +870,44 @@ body {
     margin-top: 288px;
   }
   .mockup__container {
-    max-width: 1220px;
+    max-width: 1330px;
   }
   .mockup__info {
     flex-basis: 600px;
   }
-  .mockup__img {
-    max-width: unset;
-  }
-  .mockup__img.bordered {
-    position: relative;
-  }
-  .mockup__img.bordered .image {
-    margin-right: 50px;
-  }
   .mockup__img .image {
-    position: relative;
     max-width: 375px;
-    z-index: 2;
+  }
+  .mockup__img .image.events {
+    max-width: 367px;
+  }
+  .mockup__img .image.wide {
+    max-width: 403px;
+  }
+  .mockup__img .image.narrow {
+    max-width: 359px;
   }
   .mockup__img .map {
     max-width: 344px;
-    position: absolute;
     top: -83px;
-    right: -164px;
-    z-index: 1;
+    right: -111px;
   }
   .mockup__img .map--rating {
     top: -128px;
   }
   .mockup__img .trail {
-    position: absolute;
     top: -134px;
-    left: -164px;
-    z-index: 1;
+    left: -187px;
   }
   .mockup__img .resort {
-    position: absolute;
     top: -138px;
-    right: -164px;
-    z-index: 1;
+    right: -111px;
+  }
+  .mockup__img.bordered .image {
+    margin-right: 50px;
+  }
+  .mtb__container {
+    max-width: 1330px;
   }
   .footer .menu-wrapper {
     grid-template-columns: 266px 145px 210px 359px;
