@@ -853,7 +853,8 @@ body {
   }
   .video__link {
     max-width: 1076px;
-    padding-bottom: 42.2%;
+    height: 561px;
+    padding-bottom: 0;
     margin: 0 auto;
   }
   .mockup.first {
