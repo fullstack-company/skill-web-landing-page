@@ -97,23 +97,23 @@ body {
   background-color: var(--white);
 }
 .container {
+  position: relative;
   width: 100%;
-  padding: 0 25px;
+  padding: 0 20px;
   margin: 0 auto;
-  overflow: hidden;
 }
 .section-title {
   display: none;
 }
 .section-subtitle {
   font-family: var(--fontFamilySecondary);
-  font-size: 27px;
+  font-size: 24px;
   font-weight: 800;
-  line-height: 33px;
+  line-height: 29px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--black);
-  margin-bottom: 44px;
+  margin-bottom: 70px;
 }
 
 /* Header styles */
@@ -180,19 +180,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 7px 7px 7px 10px;
-  border: 2px solid var(--nepal);
-  border-radius: 34px;
+  padding: 5px 5px 5px 7px;
+  border: 1px solid var(--nepal);
+  border-radius: 24px;
   margin-right: 27px;
   margin-left: auto;
   z-index: 10;
 }
 .season__status {
-  width: 27px;
-  height: 27px;
+  width: 19px;
+  height: 19px;
   background: var(--nepal);
   border-radius: 50%;
-  margin-left: 12px;
+  margin-left: 8px;
+}
+.season__icon {
+  flex-basis: 14px;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 .header .lang {
   display: inline-flex;
@@ -300,7 +305,7 @@ body {
   z-index: 5;
 }
 .promo__wrapper {
-  max-width: 158px;
+  max-width: 159px;
   margin: 0 auto;
 }
 .promo__title {
@@ -317,15 +322,18 @@ body {
 }
 .promo__more {
   display: block;
-  max-width: 113px;
-  margin-top: 49px;
-  z-index: 2;
+  max-width: 19px;
+  margin-top: 85px;
+  z-index: 5;
 }
 
 /* Video styles */
 .video {
   text-align: center;
-  margin-top: 80px;
+  margin-top: 50px;
+}
+.video__title {
+  margin-bottom: 50px;
 }
 .video__link {
   position: relative;
@@ -343,32 +351,68 @@ body {
 
 /* Mockup sections styles */
 .mockup {
-  margin-top: 150px;
-}
-.mockup.first {
-  margin-top: 122px;
+  margin-top: 100px;
 }
 .mockup.last {
-  margin-bottom: 150px;
+  margin-bottom: 100px;
+}
+.mockup__container {
+  padding: 0 30px;
 }
 .mockup__info {
   text-align: center;
 }
 .mockup__img {
+  max-width: 270px;
+  margin: 0 auto;
+}
+.mockup__img.bordered {
   max-width: 220px;
-  margin: auto;
+}
+.mockup__img.watch {
+  max-width: 243px;
 }
 .mockup__img .image {
   filter: drop-shadow(0px 0px 15px rgba(36, 47, 94, 0.15));
 }
-.mockup.last .mockup__img {
-  max-width: 303px;
-}
 .mockup__img.desktop {
   display: none;
 }
+.mockup__img.mobile {
+  position: relative;
+}
+.mockup__img.mobile.map {
+  margin-top: 233px;
+}
+.mockup__img.mobile .map {
+  max-width: 220px;
+  position: absolute;
+  top: -163px;
+  right: -77px;
+  z-index: -1;
+}
+.mockup__img.mobile.trail {
+  margin-top: 192px;
+}
+.mockup__img.mobile .trail {
+  max-width: 263px;
+  position: absolute;
+  top: -122px;
+  left: -77px;
+  z-index: -1;
+}
+.mockup__img.mobile.resort {
+  margin-top: 193px;
+}
+.mockup__img.mobile .resort {
+  max-width: 263px;
+  position: absolute;
+  top: -123px;
+  right: -77px;
+  z-index: -1;
+}
 .mockup .text {
-  margin-top: 35px;
+  margin-top: 50px;
 }
 
 /* Mtb section styles */
@@ -378,7 +422,7 @@ body {
   padding-bottom: 37px;
 }
 .mtb__subtitle {
-  margin-bottom: 20px;
+  margin-bottom: 57px;
 }
 .mtb__info {
   max-width: 318px;
@@ -546,6 +590,21 @@ body {
   .header .logo {
     flex-basis: 160px;
   }
+  .header .season {
+    padding: 7px 7px 7px 10px;
+    border-width: 2px;
+    border-radius: 34px;
+    margin-right: 90px;
+    z-index: 10;
+  }
+  .season__icon {
+    flex-basis: 20px;
+  }
+  .season__status {
+    width: 27px;
+    height: 27px;
+    margin-left: 12px;
+  }
   .header__menus {
     position: static;
     width: auto;
@@ -590,10 +649,6 @@ body {
   }
   .header .menu__link + .menu__link {
     margin-left: 53px;
-  }
-  .header .season {
-    margin-right: 90px;
-    margin-left: auto;
   }
   .header .lang {
     position: absolute;
@@ -657,11 +712,14 @@ body {
     margin-left: 29px;
   }
   .promo__more {
-    max-width: 155px;
+    max-width: 45px;
     position: absolute;
     bottom: 32px;
-    left: calc(50% - 28px);
+    left: calc(50% - 22px);
     margin-top: 0;
+  }
+  .video {
+    margin-top: 82px;
   }
   .video__title {
     max-width: 837px;
@@ -674,7 +732,6 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    overflow: visible;
   }
   .mockup__info {
     flex-basis: 655px;
@@ -702,6 +759,7 @@ body {
   }
   .mockup__img.bordered {
     position: relative;
+    max-width: unset;
   }
   .mockup__img .image {
     position: relative;
@@ -729,6 +787,10 @@ body {
     top: -78px;
     right: -25px;
     z-index: 1;
+  }
+  .mockup.last .mockup__img {
+    max-width: 325px;
+    margin-left: 95px;
   }
   .mtb {
     display: grid;
@@ -842,7 +904,7 @@ body {
     max-width: 605px;
   }
   .promo__img img {
-    object-position: right center;
+    object-position: right 20%;
   }
   .promo__title {
     font-size: 34px;
