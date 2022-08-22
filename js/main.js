@@ -1,10 +1,12 @@
 window.addEventListener("DOMContentLoaded", () => {
   // Burger menu handle
+  const header = document.getElementById("back_to_top");
   const burger = document.getElementById("burger");
   const menu = document.getElementById("menu");
 
   if (burger) {
     burger.addEventListener("click", () => {
+      header.classList.toggle("_active");
       burger.classList.toggle("_active");
       menu.classList.toggle("_active");
 
