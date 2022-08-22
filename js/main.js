@@ -26,4 +26,15 @@ window.addEventListener("DOMContentLoaded", () => {
       lang.classList.toggle("_active");
     });
   }
+
+  // Scroll top btn show/hide
+  const scrollTop = document.querySelector(".back-to-top");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 750) {
+      scrollTop.classList.add("_shown");
+    } else {
+      scrollTop.classList.remove("_shown");
+    }
+  });
 });
