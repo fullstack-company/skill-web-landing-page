@@ -113,7 +113,7 @@ body {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--black);
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
 
 /* Header styles */
@@ -122,8 +122,22 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding-top: 44px;
+  padding-top: 20px;
   z-index: 10;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+.header._active::after {
+  opacity: 1;
 }
 .header__container {
   display: flex;
@@ -381,16 +395,6 @@ body {
 .mockup__img.mobile {
   position: relative;
 }
-.mockup__img.mobile.map {
-  margin-top: 233px;
-}
-.mockup__img.mobile .map {
-  max-width: 220px;
-  position: absolute;
-  top: -163px;
-  right: -77px;
-  z-index: -1;
-}
 .mockup__img.mobile.trail {
   margin-top: 192px;
 }
@@ -398,7 +402,7 @@ body {
   max-width: 263px;
   position: absolute;
   top: -122px;
-  left: -77px;
+  left: -50px;
   z-index: -1;
 }
 .mockup__img.mobile.resort {
@@ -408,7 +412,7 @@ body {
   max-width: 263px;
   position: absolute;
   top: -123px;
-  right: -77px;
+  right: -50px;
   z-index: -1;
 }
 .mockup .text {
@@ -545,10 +549,17 @@ body {
   align-items: center;
   justify-content: center;
   background-color: var(--nepal);
+  opacity: 0;
   border-radius: 50%;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12),
     0px 2px 4px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  transition: all var(--transition);
   z-index: 3;
+}
+.back-to-top._shown {
+  opacity: 1;
+  visibility: visible;
 }
 .back-to-top svg {
   stroke: var(--white);
@@ -578,7 +589,7 @@ body {
     margin-bottom: 26px;
   }
   .header {
-    padding-top: 29px;
+    padding-top: 18px;
   }
   .header .container {
     overflow: visible;
@@ -766,11 +777,14 @@ body {
     max-width: 275px;
     z-index: 2;
   }
+  .mockup__img.bordered .image {
+    margin-right: 100px;
+  }
   .mockup__img .map {
     max-width: 244px;
     position: absolute;
     top: -53px;
-    right: -25px;
+    right: 0;
     z-index: 1;
   }
   .mockup__img .map--rating {
@@ -779,18 +793,21 @@ body {
   .mockup__img .trail {
     position: absolute;
     top: -74px;
-    left: -74px;
+    left: 0;
     z-index: 1;
   }
   .mockup__img .resort {
     position: absolute;
     top: -78px;
-    right: -25px;
+    right: 0;
     z-index: 1;
   }
   .mockup.last .mockup__img {
     max-width: 325px;
     margin-left: 95px;
+  }
+  .mockup.resorts .mockup__info {
+    margin-top: -138px;
   }
   .mtb {
     display: grid;
@@ -932,7 +949,7 @@ body {
     margin-top: 288px;
   }
   .mockup__container {
-    max-width: 1330px;
+    max-width: 1440px;
   }
   .mockup__info {
     flex-basis: 600px;
@@ -952,21 +969,26 @@ body {
   .mockup__img .map {
     max-width: 344px;
     top: -83px;
-    right: -111px;
+    right: 0;
   }
   .mockup__img .map--rating {
     top: -128px;
   }
   .mockup__img .trail {
+    max-width: 398px;
     top: -134px;
-    left: -187px;
+    left: 0;
   }
   .mockup__img .resort {
     top: -138px;
-    right: -111px;
+    right: 0;
   }
   .mockup__img.bordered .image {
-    margin-right: 50px;
+    margin-right: 215px;
+  }
+  .mockup.routes .image {
+    margin-right: 0;
+    margin-left: 110px;
   }
   .mtb__container {
     max-width: 1330px;
