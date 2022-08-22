@@ -135,6 +135,7 @@ body {
   background-color: var(--white);
   opacity: 0;
   transition: opacity 0.1s ease-in-out;
+  z-index: 9;
 }
 .header._active::after {
   opacity: 1;
