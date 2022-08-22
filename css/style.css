@@ -402,7 +402,7 @@ body {
   max-width: 263px;
   position: absolute;
   top: -122px;
-  left: -50px;
+  left: calc(50% - 131px);
   z-index: -1;
 }
 .mockup__img.mobile.resort {
@@ -412,7 +412,7 @@ body {
   max-width: 263px;
   position: absolute;
   top: -123px;
-  right: -50px;
+  right: calc(50% - 131px);
   z-index: -1;
 }
 .mockup .text {
