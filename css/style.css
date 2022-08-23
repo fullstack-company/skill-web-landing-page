@@ -919,7 +919,7 @@ body {
     max-width: 605px;
   }
   .promo__img img {
-    object-position: right 20%;
+    object-position: right 50%;
   }
   .promo__title {
     font-size: 34px;
