@@ -31,12 +31,16 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Scroll top btn show/hide
   const scrollTop = document.querySelector(".back-to-top");
+  let oldValue = 0;
+  let newValue = 0;
 
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 750) {
-      scrollTop.classList.add("_shown");
-    } else {
+  window.addEventListener("scroll", (e) => {
+    newValue = window.pageYOffset;
+    if (oldValue < newValue) {
       scrollTop.classList.remove("_shown");
+    } else if (oldValue > newValue) {
+      scrollTop.classList.add("_shown");
     }
+    oldValue = newValue;
   });
 });
