@@ -381,9 +381,6 @@ body {
   max-width: 270px;
   margin: 0 auto;
 }
-.mockup__img.bordered {
-  max-width: 220px;
-}
 .mockup__img.watch {
   max-width: 243px;
 }
@@ -986,7 +983,7 @@ body {
     right: 0;
   }
   .mockup__img.bordered .image {
-    margin-right: 215px;
+    margin-right: 222px;
   }
   .mockup.routes .image {
     margin-right: 0;
