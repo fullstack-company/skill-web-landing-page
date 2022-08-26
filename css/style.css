@@ -764,9 +764,6 @@ body {
   .mockup.first {
     margin-top: 226px;
   }
-  .mockup.recording {
-    margin-top: 283px;
-  }
   .mockup.routes {
     margin-top: 284px;
   }
@@ -836,12 +833,8 @@ body {
     right: 0;
     z-index: 1;
   }
-  .mockup__img.bordered .recording {
-    position: absolute;
-    top: -78px;
-    right: 0;
-    margin-right: 0;
-    z-index: 2;
+  .mockup.recording .image {
+    max-width: 364px;
   }
   .mockup.last .mockup__img {
     max-width: 325px;
@@ -1013,10 +1006,6 @@ body {
   .mockup__img.bordered .image {
     margin-right: 222px;
   }
-  .mockup__img.bordered .recording {
-    top: -145px;
-    margin-right: 0;
-  }
   .mockup.routes .image {
     margin-right: 0;
     margin-left: 110px;
@@ -1024,6 +1013,9 @@ body {
   .mockup.resorts .image {
     margin-right: 0;
     margin-left: 110px;
+  }
+  .mockup.recording .image {
+    max-width: 637px;
   }
   .mtb__container {
     max-width: 1330px;
