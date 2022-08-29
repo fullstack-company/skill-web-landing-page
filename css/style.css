@@ -441,6 +441,14 @@ body {
   right: calc(50% - 131px);
   z-index: -1;
 }
+.mockup.routes .mockup__img,
+.mockup.resorts .mockup__img {
+  max-width: 262px;
+}
+.mockup.routes .image,
+.mockup.resorts .image {
+  max-width: 220px;
+}
 .mockup .text {
   margin-top: 50px;
 }
@@ -764,6 +772,9 @@ body {
   .mockup.first {
     margin-top: 226px;
   }
+  .mockup.mobile {
+    display: none;
+  }
   .mockup.routes {
     margin-top: 284px;
   }
@@ -792,6 +803,14 @@ body {
   .mockup__img {
     max-width: unset;
     margin: 0;
+  }
+  .mockup.routes .mockup__img,
+  .mockup.resorts .mockup__img {
+    max-width: 100%;
+  }
+  .mockup.routes .image,
+  .mockup.resorts .image {
+    max-width: 275px;
   }
   .mockup__img.desktop {
     display: block;
@@ -977,6 +996,10 @@ body {
     flex-basis: 600px;
   }
   .mockup__img .image {
+    max-width: 375px;
+  }
+  .mockup.routes .image,
+  .mockup.resorts .image {
     max-width: 375px;
   }
   .mockup__img .image.events {
