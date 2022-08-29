@@ -130,6 +130,9 @@ body.bg-dark {
   color: var(--black);
   margin-bottom: 60px;
 }
+.bg-dark .section-subtitle {
+  color: var(--white);
+}
 
 /* Header styles */
 .header {
@@ -466,6 +469,9 @@ body.bg-dark {
 }
 .mockup .text {
   margin-top: 50px;
+}
+.bg-dark .mockup .text {
+  color: #a9a9a9;
 }
 
 /* Mtb section styles */
