@@ -1001,7 +1001,7 @@ body {
   .mockup__img .resort {
     max-width: 430px;
     top: -136px;
-    right: 0;
+    left: 0;
   }
   .mockup__img.bordered .image {
     margin-right: 222px;
@@ -1012,7 +1012,7 @@ body {
   }
   .mockup.resorts .image {
     margin-right: 0;
-    margin-left: 110px;
+    margin-left: 125px;
   }
   .mockup.recording .image {
     max-width: 637px;
