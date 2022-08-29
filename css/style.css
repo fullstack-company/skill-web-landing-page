@@ -873,6 +873,10 @@ body.bg-dark {
     right: 0;
     z-index: 1;
   }
+  .mockup.resorts .image {
+    margin-right: 0;
+    margin-left: 100px;
+  }
   .mockup.recording .image {
     max-width: 364px;
   }
