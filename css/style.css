@@ -1010,6 +1010,24 @@ body.bg-dark {
   .mockup__container {
     max-width: 1440px;
   }
+  .mockup.first .mockup__container {
+    padding: 0 94px;
+  }
+  .mockup.lifts .mockup__container {
+    padding: 0 130px;
+  }
+  .mockup.friends .mockup__container {
+    padding: 0 140px;
+  }
+  .mockup.routes .mockup__container {
+    padding: 0 110px;
+  }
+  .mockup.resorts .mockup__container {
+    padding: 0 116px;
+  }
+  .mockup.last .mockup__container {
+    padding: 0 110px;
+  }
   .mockup__info {
     flex-basis: 600px;
   }
