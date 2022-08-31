@@ -804,6 +804,7 @@ body.bg-dark {
     flex-direction: row-reverse;
   }
   .mockup__container {
+    max-width: 1024px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
