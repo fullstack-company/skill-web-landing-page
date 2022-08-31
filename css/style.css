@@ -95,9 +95,6 @@ body {
   line-height: 22px;
   color: var(--emperor);
   background-color: var(--white);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 body.bg-light {
   background-color: #f5f5f5;
@@ -106,10 +103,10 @@ body.bg-dark {
   background-color: #4a4a4a;
 }
 .bg-light .wrapper {
-  background: url(../images/body-bg-light.svg), #f5f5f5;
+  background: center / contain no-repeat url(../images/body-bg-light.svg), #f5f5f5;
 }
 .bg-dark .wrapper {
-  background: url(../images/body-bg.svg), #4a4a4a;
+  background: center / contain no-repeat url(../images/body-bg.svg), #4a4a4a;
 }
 .container {
   position: relative;
@@ -1015,7 +1012,7 @@ body.bg-dark {
     margin: 0 auto;
   }
   .mockup.last {
-    margin-top: 200px;
+    margin-top: 170px;
   }
   .mockup__container {
     max-width: 1440px;
