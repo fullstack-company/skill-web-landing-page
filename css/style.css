@@ -1023,10 +1023,10 @@ body.bg-dark {
     padding: 0 94px;
   }
   .mockup.lifts .mockup__container {
-    padding: 0 130px;
+    padding: 0 90px 0 130px;
   }
   .mockup.friends .mockup__container {
-    padding: 0 140px;
+    padding: 0 140px 0 100px;
   }
   .mockup.routes .mockup__container {
     padding: 0 110px;
