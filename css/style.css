@@ -870,14 +870,11 @@ body.bg-dark {
     z-index: 1;
   }
   .mockup__img .resort {
+    max-width: 430px;
     position: absolute;
     top: -78px;
     right: 0;
     z-index: 1;
-  }
-  .mockup.resorts .image {
-    margin-right: 0;
-    margin-left: 100px;
   }
   .mockup.stats .image {
     max-width: 364px;
@@ -1081,7 +1078,7 @@ body.bg-dark {
     max-width: 359px;
   }
   .mockup__img .map {
-    max-width: 344px;
+    max-width: 313px;
     top: -104px;
     right: 0;
   }
@@ -1091,20 +1088,24 @@ body.bg-dark {
     left: 0;
   }
   .mockup__img .resort {
-    max-width: 430px;
     top: -136px;
-    left: 0;
+    right: 0;
   }
   .mockup__img.bordered .image {
-    margin-right: 222px;
+    margin-right: 218px;
   }
   .mockup.routes .image {
     margin-right: 0;
     margin-left: 110px;
   }
+  .mockup.stats .image {
+    max-width: 637px;
+  }
+  .mockup.competition .image {
+    max-width: 580px;
+  }
   .mockup.resorts .image {
-    margin-right: 0;
-    margin-left: 125px;
+    margin-right: 140px;
   }
   .mockup.recording .image {
     max-width: 637px;
