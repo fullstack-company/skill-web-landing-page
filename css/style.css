@@ -96,6 +96,19 @@ body {
   color: var(--emperor);
   background-color: var(--white);
 }
+body.bg-light {
+  background-color: #f5f5f5;
+}
+body.bg-dark {
+  background-color: #4a4a4a;
+}
+.bg-light .wrapper {
+  background: center / contain no-repeat url(../images/body-bg-light.svg),
+    #f5f5f5;
+}
+.bg-dark .wrapper {
+  background: center / contain no-repeat url(../images/body-bg.svg), #4a4a4a;
+}
 .container {
   position: relative;
   width: 100%;
@@ -114,6 +127,9 @@ body {
   text-transform: uppercase;
   color: var(--black);
   margin-bottom: 60px;
+}
+.bg-dark .section-subtitle {
+  color: var(--white);
 }
 
 /* Header styles */
@@ -182,7 +198,7 @@ body {
   padding: 12px 20px;
 }
 .header .menu__link.active {
-  color: #95a2be;
+  color: var(--viridianGreen);
   background: linear-gradient(
       0deg,
       rgba(149, 162, 190, 0.13),
@@ -196,7 +212,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 5px 5px 5px 7px;
-  border: 1px solid var(--nepal);
+  border: 1px solid var(--viridianGreen);
   border-radius: 24px;
   margin-right: 27px;
   margin-left: auto;
@@ -205,14 +221,14 @@ body {
 .season__status {
   width: 19px;
   height: 19px;
-  background: var(--nepal);
+  background: var(--viridianGreen);
   border-radius: 50%;
-  margin-left: 8px;
 }
 .season__icon {
   flex-basis: 14px;
   flex-grow: 0;
   flex-shrink: 0;
+  margin-left: 8px;
 }
 .header .lang {
   display: inline-flex;
@@ -303,7 +319,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding-bottom: 32px;
+  padding-bottom: 100px;
 }
 .promo__img img {
   position: absolute;
@@ -312,7 +328,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: right top;
+  object-position: 90% top;
   z-index: 4;
 }
 .promo__container {
@@ -325,9 +341,35 @@ body {
 }
 .promo__title {
   display: none;
+  font-family: var(--fontFamilySecondary);
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--black);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.promo__title.mobile {
+  display: block;
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  font-size: 22px;
+  line-height: 23px;
+  z-index: 5;
 }
 .promo__info {
   display: none;
+  color: var(--black);
+}
+.promo__info.mobile {
+  display: block;
+  position: absolute;
+  top: 160px;
+  left: 20px;
+  max-width: 180px;
+  font-size: 14px;
+  line-height: 20px;
+  z-index: 5;
 }
 .promo__stores .stores__link {
   display: block;
@@ -337,8 +379,10 @@ body {
 }
 .promo__more {
   display: block;
+  position: absolute;
+  bottom: 22px;
+  left: calc(50% - 10px);
   max-width: 19px;
-  margin-top: 85px;
   z-index: 5;
 }
 
@@ -381,9 +425,6 @@ body {
   max-width: 270px;
   margin: 0 auto;
 }
-.mockup__img.bordered {
-  max-width: 220px;
-}
 .mockup__img.watch {
   max-width: 243px;
 }
@@ -416,8 +457,19 @@ body {
   right: calc(50% - 131px);
   z-index: -1;
 }
+.mockup.routes .mockup__img,
+.mockup.resorts .mockup__img {
+  max-width: 262px;
+}
+.mockup.routes .image,
+.mockup.resorts .image {
+  max-width: 220px;
+}
 .mockup .text {
   margin-top: 50px;
+}
+.bg-dark .mockup .text {
+  color: #a9a9a9;
 }
 
 /* Mtb section styles */
@@ -463,7 +515,7 @@ body {
   line-height: 22px;
   text-align: center;
   text-transform: uppercase;
-  color: var(--gullGray);
+  color: var(--viridianGreen);
   margin-top: 14px;
 }
 .footer .menu-wrapper {
@@ -500,7 +552,7 @@ body {
 }
 .footer .menu-item__link.active {
   position: relative;
-  color: var(--cadetBlue);
+  color: var(--viridianGreen);
   padding-bottom: 9px;
 }
 .footer .menu-item__link.active::after {
@@ -510,7 +562,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: var(--cadetBlue);
+  background-color: var(--viridianGreen);
   border-radius: 20px;
 }
 .footer .menu-item__link + .menu-item__link {
@@ -549,7 +601,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--nepal);
+  background-color: var(--viridianGreen);
   opacity: 0;
   border-radius: 50%;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12),
@@ -603,7 +655,7 @@ body {
     flex-basis: 160px;
   }
   .header .season {
-    padding: 7px 7px 7px 10px;
+    padding: 6px 10px 6px 6px;
     border-width: 2px;
     border-radius: 34px;
     margin-right: 90px;
@@ -611,11 +663,11 @@ body {
   }
   .season__icon {
     flex-basis: 20px;
+    margin-left: 12px;
   }
   .season__status {
     width: 27px;
     height: 27px;
-    margin-left: 12px;
   }
   .header__menus {
     position: static;
@@ -646,7 +698,7 @@ body {
   .header .menu__link.active {
     position: relative;
     background: none;
-    color: var(--cadetBlue);
+    color: #5b8876;
     padding: 0 12px;
   }
   .header .menu__link.active::after {
@@ -698,22 +750,21 @@ body {
   }
   .promo__title {
     display: block;
-    font-family: var(--fontFamilySecondary);
-    font-weight: 800;
     font-size: 52px;
     line-height: 63px;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    color: var(--white);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     margin-bottom: 26px;
+  }
+  .promo__title.mobile {
+    display: none;
   }
   .promo__info {
     display: block;
     font-size: 20px;
     line-height: 30px;
-    color: var(--white);
     margin-bottom: 79px;
+  }
+  .promo__info.mobile {
+    display: none;
   }
   .promo__stores {
     display: flex;
@@ -737,10 +788,23 @@ body {
     max-width: 837px;
     margin: 0 auto 95px;
   }
+  .mockup.first {
+    margin-top: 226px;
+  }
+  .mockup.mobile {
+    display: none;
+  }
+  .mockup.routes {
+    margin-top: 284px;
+  }
+  .mockup.resorts {
+    margin-top: 288px;
+  }
   .mockup--reversed .mockup__container {
     flex-direction: row-reverse;
   }
   .mockup__container {
+    max-width: 1024px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -759,6 +823,14 @@ body {
   .mockup__img {
     max-width: unset;
     margin: 0;
+  }
+  .mockup.routes .mockup__img,
+  .mockup.resorts .mockup__img {
+    max-width: 100%;
+  }
+  .mockup.routes .image,
+  .mockup.resorts .image {
+    max-width: 275px;
   }
   .mockup__img.desktop {
     display: block;
@@ -788,9 +860,6 @@ body {
     right: 0;
     z-index: 1;
   }
-  .mockup__img .map--rating {
-    top: -78px;
-  }
   .mockup__img .trail {
     position: absolute;
     top: -74px;
@@ -803,12 +872,19 @@ body {
     right: 0;
     z-index: 1;
   }
+  .mockup.resorts .image {
+    margin-right: 0;
+    margin-left: 100px;
+  }
+  .mockup.recording .image {
+    max-width: 364px;
+  }
   .mockup.last .mockup__img {
     max-width: 325px;
-    margin-left: 95px;
+    margin-right: 95px;
   }
   .mockup.resorts .mockup__info {
-    margin-top: -138px;
+    margin-top: -82px;
   }
   .mtb {
     display: grid;
@@ -905,7 +981,7 @@ body {
     line-height: 26px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--gullGray);
+    color: var(--viridianGreen);
     justify-self: flex-end;
   }
   .back-to-top {
@@ -922,7 +998,7 @@ body {
     max-width: 605px;
   }
   .promo__img img {
-    object-position: right 20%;
+    object-position: right 50%;
   }
   .promo__title {
     font-size: 34px;
@@ -937,25 +1013,59 @@ body {
     padding-bottom: 0;
     margin: 0 auto;
   }
-  .mockup.first {
-    margin-top: 205px;
-  }
-  .mockup.recording {
-    margin-top: 233px;
-  }
-  .mockup.routes {
-    margin-top: 284px;
-  }
-  .mockup.resorts {
-    margin-top: 288px;
+  .mockup.last {
+    margin-top: 100px;
   }
   .mockup__container {
     max-width: 1440px;
   }
+  .mockup.first .mockup__container {
+    padding: 0 94px;
+  }
+  .mockup.lifts .mockup__container {
+    padding: 0 130px;
+  }
+  .mockup.friends .mockup__container {
+    padding: 0 140px;
+  }
+  .mockup.routes .mockup__container {
+    padding: 0 110px;
+  }
+  .mockup.resorts .mockup__container {
+    padding: 0 116px;
+  }
+  .mockup.last .mockup__container {
+    padding: 0 110px;
+  }
   .mockup__info {
     flex-basis: 600px;
   }
+  .mockup.first .mockup__info {
+    margin-top: 90px;
+  }
+  .mockup.lifts .mockup__info {
+    margin-top: 44px;
+  }
+  .mockup.friends .mockup__info {
+    margin-top: 34px;
+  }
+  .mockup.routes .mockup__info {
+    margin-top: -100px;
+  }
+  .mockup.recording .mockup__info {
+    margin-top: 84px;
+  }
+  .mockup.resorts .mockup__info {
+    margin-top: -110px;
+  }
+  .mockup.last .mockup__info {
+    margin-top: 80px;
+  }
   .mockup__img .image {
+    max-width: 375px;
+  }
+  .mockup.routes .image,
+  .mockup.resorts .image {
     max-width: 375px;
   }
   .mockup__img .image.events {
@@ -969,11 +1079,8 @@ body {
   }
   .mockup__img .map {
     max-width: 344px;
-    top: -83px;
+    top: -104px;
     right: 0;
-  }
-  .mockup__img .map--rating {
-    top: -128px;
   }
   .mockup__img .trail {
     max-width: 398px;
@@ -981,15 +1088,23 @@ body {
     left: 0;
   }
   .mockup__img .resort {
-    top: -138px;
-    right: 0;
+    max-width: 430px;
+    top: -136px;
+    left: 0;
   }
   .mockup__img.bordered .image {
-    margin-right: 215px;
+    margin-right: 222px;
   }
   .mockup.routes .image {
     margin-right: 0;
     margin-left: 110px;
+  }
+  .mockup.resorts .image {
+    margin-right: 0;
+    margin-left: 125px;
+  }
+  .mockup.recording .image {
+    max-width: 637px;
   }
   .mtb__container {
     max-width: 1330px;
