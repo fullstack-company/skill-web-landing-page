@@ -515,7 +515,7 @@ body.bg-dark {
   line-height: 22px;
   text-align: center;
   text-transform: uppercase;
-  color: var(--viridianGreen);
+  color: var(--nepal);
   margin-top: 14px;
 }
 .footer .menu-wrapper {
@@ -552,7 +552,7 @@ body.bg-dark {
 }
 .footer .menu-item__link.active {
   position: relative;
-  color: var(--viridianGreen);
+  color: var(--nepal);
   padding-bottom: 9px;
 }
 .footer .menu-item__link.active::after {
@@ -562,7 +562,7 @@ body.bg-dark {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: var(--viridianGreen);
+  background-color: var(--nepal);
   border-radius: 20px;
 }
 .footer .menu-item__link + .menu-item__link {
@@ -601,7 +601,7 @@ body.bg-dark {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--viridianGreen);
+  background-color: var(--nepal);
   opacity: 0;
   border-radius: 50%;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12),
@@ -984,7 +984,7 @@ body.bg-dark {
     line-height: 26px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--viridianGreen);
+    color: var(--nepal);
     justify-self: flex-end;
   }
   .back-to-top {
