@@ -879,7 +879,7 @@ body.bg-dark {
     margin-right: 0;
     margin-left: 100px;
   }
-  .mockup.recording .image {
+  .mockup.stats .image {
     max-width: 364px;
   }
   .mockup.last .mockup__img {
@@ -1055,7 +1055,7 @@ body.bg-dark {
   .mockup.routes .mockup__info {
     margin-top: -100px;
   }
-  .mockup.recording .mockup__info {
+  .mockup.stats .mockup__info {
     margin-top: 84px;
   }
   .mockup.resorts .mockup__info {
