@@ -1024,7 +1024,7 @@ body.bg-dark {
   .mockup.first .mockup__container {
     padding: 0 94px;
   }
-  .mockup.lifts .mockup__container {
+  .mockup.events .mockup__container {
     padding: 0 130px;
   }
   .mockup.friends .mockup__container {
@@ -1045,7 +1045,7 @@ body.bg-dark {
   .mockup.first .mockup__info {
     margin-top: 90px;
   }
-  .mockup.lifts .mockup__info {
+  .mockup.events .mockup__info {
     margin-top: 44px;
   }
   .mockup.friends .mockup__info {
